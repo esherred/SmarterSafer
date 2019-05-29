@@ -2,17 +2,15 @@
 
 <?php the_post() ?>
 
-<?php $featured_img_url = get_the_post_thumbnail_url(); ?>
+<?php //$featured_img_url = get_the_post_thumbnail_url(); ?>
 
 <?php get_header(); ?>
 
 <main>
 	<section class="header home">
-		<?php if($featured_img_url) : ?>
-			<div class="feature-image">
-				<img src="<?php echo $featured_img_url ?>" alt="<?php the_title(); ?>">
-			</div>
-		<?php endif; ?>
+		<div class="feature-image">
+			<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/flood.jpg" alt="<?php the_title(); ?>">
+		</div>
 		<h2>Dangerous weather events and natural disasters are predicted to only get worse.</h2>
 		<div class="button"><a href="#">Download our Congressional Guide <i class="fas fa-arrow-right"></i></a></div>
 	</section>

@@ -48,6 +48,17 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/assets/img/flood.jpg": {
+		"ft": 16384,
+		"iS": 1641481,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/flood.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/assets/img/logo.png": {
 		"ft": 32768,
 		"iS": 5563,

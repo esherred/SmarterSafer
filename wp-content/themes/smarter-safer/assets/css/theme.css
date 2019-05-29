@@ -80,8 +80,10 @@ main {
       font-size: 3rem;
       z-index: 2;
       position: relative;
-      padding: .5rem;
-      margin: 0; }
+      padding: 1.5rem;
+      margin: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #fff; }
     main section.header.home .button {
       position: relative;
       padding: 5px;
@@ -111,8 +113,7 @@ main {
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.2); }
+        height: 100%; }
       main section.header.home .feature-image img {
         display: block;
         z-index: 1;
