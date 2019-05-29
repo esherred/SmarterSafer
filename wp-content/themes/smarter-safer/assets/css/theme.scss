@@ -60,6 +60,7 @@ header {
 main {
   max-width: 1200px;
   margin: auto;
+  position: relative;
 
   @media (max-width: 1200px) {
     max-width: 90%;
@@ -68,34 +69,10 @@ main {
   section {
 
     &.header {
-      border-bottom: 1px solid $color-primary;
-      padding-bottom: 1.5rem;
       h2 {
         font-size: 3rem;
       }
-      .button {
-        position: relative;
-        padding: 5px;
-        margin: 0 0 0 4rem;
-        z-index: 2;
-        background-color: $white;
-        display: inline-block;
-
-        a {
-          padding: 1rem;
-          background-color: $color-primary;
-          display: inline-block;
-          text-transform: uppercase;
-          text-decoration: none;
-          color: $white;
-          font-weight: 700;
-          &:hover {
-            background-color: $color-secondary;
-          }
-        }
-      }
       .feature-image {
-        margin-top: -2rem;
         position: relative;
         margin-bottom: 1.5rem;
         img {
@@ -105,52 +82,6 @@ main {
           max-height: 300px;
           width: 100%;
           height: 100%;
-        }
-      }
-
-      .intro {
-        font-size: 1.25rem;
-        line-height: 1.5;
-      }
-
-      .issues {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        grid-gap: 1rem;
-        grid-template-areas: 'title title title';
-        
-        @media (max-width: 992px) {
-          grid-template-columns: 1fr;
-          grid-template-areas: 'title';
-        }
-
-        h2 {
-          grid-area: title;
-          font-size: 2rem;
-          margin: 1.5rem 0 0 0;
-        }
-        .issue {
-          position: relative;
-          h3 {
-            z-index: 2;
-            margin: 0;
-            padding: .5rem;
-            position: absolute;
-            top: 0;
-            left: 0;
-            color: $white;
-            background-color: rgba($black, .8);
-          }
-          img {
-            z-index: 1;
-            position: relative;
-            object-fit: cover;
-            width: 100%;
-            max-height: 300px;
-            height: 100%;
-            display: block;
-          }
         }
       }
 
@@ -169,6 +100,118 @@ main {
         h1 {
           font-size: 3rem;
           margin: 1.5rem 0 .5rem 0;
+        }
+      }
+
+      &.home {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: space-between;
+        margin: 1.5rem 0;
+        h2 {
+          font-size: 3rem;
+          z-index: 2;
+          position: relative;
+          padding: .5rem;
+          margin: 0;
+        }
+        .button {
+          position: relative;
+          padding: 5px;
+          margin: .5rem;
+          z-index: 2;
+          text-align: right;
+
+          a {
+            border: .25rem solid $white;
+            padding: 1rem;
+            background-color: $color-primary;
+            display: inline-block;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $white;
+            font-weight: 700;
+            &:hover {
+              background-color: $color-secondary;
+            }
+          }
+        }
+        .feature-image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          max-height: 500px;
+
+          &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($white, .2);
+          }
+          img {
+            display: block;
+            z-index: 1;
+            object-fit: cover;
+            max-height: 500px;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    &.intro {
+      font-size: 1.25rem;
+      line-height: 1.5;
+      border-bottom: 1px solid $color-primary;
+      padding-bottom: 1.5rem;
+    }
+
+    &.issues {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-gap: 1rem;
+      grid-template-areas: 'title title title';
+      border-bottom: 1px solid $color-primary;
+      padding-bottom: 1.5rem;
+      
+      @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'title';
+      }
+
+      h2 {
+        grid-area: title;
+        font-size: 2rem;
+        margin: 1.5rem 0 0 0;
+      }
+      .issue {
+        position: relative;
+        h3 {
+          z-index: 2;
+          margin: 0;
+          padding: .5rem;
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: $white;
+          background-color: rgba($black, .8);
+        }
+        img {
+          z-index: 1;
+          position: relative;
+          object-fit: cover;
+          width: 100%;
+          max-height: 300px;
+          height: 100%;
+          display: block;
         }
       }
     }
@@ -213,7 +256,7 @@ main {
       grid-template-rows: auto;
       grid-gap: 1rem;
       grid-template-areas: 'title title title';
-      border-bottom: 1px solid $color-primary;
+      // border-bottom: 1px solid $color-primary;
       padding-bottom: 1.5rem;
 
       @media (max-width: 992px) {
@@ -264,7 +307,8 @@ main {
       grid-gap: 1rem;
       grid-template-areas: 'title title';
       padding-bottom: 1.5rem;
-
+      border-bottom: 1px solid $color-primary;
+      
       @media (max-width: 992px) {
         grid-template-columns: 1fr;
         grid-template-areas: 'title';

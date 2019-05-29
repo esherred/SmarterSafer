@@ -42,23 +42,54 @@ header {
 
 main {
   max-width: 1200px;
-  margin: auto; }
+  margin: auto;
+  position: relative; }
   @media (max-width: 1200px) {
     main {
       max-width: 90%; } }
-  main section.header {
-    border-bottom: 1px solid #154776;
-    padding-bottom: 1.5rem; }
-    main section.header h2 {
-      font-size: 3rem; }
-    main section.header .button {
+  main section.header h2 {
+    font-size: 3rem; }
+  main section.header .feature-image {
+    position: relative;
+    margin-bottom: 1.5rem; }
+    main section.header .feature-image img {
+      display: block;
+      z-index: 1;
+      object-fit: cover;
+      max-height: 300px;
+      width: 100%;
+      height: 100%; }
+  main section.header.issue h1 {
+    font-size: 3rem; }
+  main section.header.issue .feature-image {
+    margin-top: 0; }
+  main section.header.news {
+    border-bottom: 0;
+    margin-bottom: 0; }
+    main section.header.news h1 {
+      font-size: 3rem;
+      margin: 1.5rem 0 .5rem 0; }
+  main section.header.home {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-between;
+    margin: 1.5rem 0; }
+    main section.header.home h2 {
+      font-size: 3rem;
+      z-index: 2;
+      position: relative;
+      padding: .5rem;
+      margin: 0; }
+    main section.header.home .button {
       position: relative;
       padding: 5px;
-      margin: 0 0 0 4rem;
+      margin: .5rem;
       z-index: 2;
-      background-color: #fff;
-      display: inline-block; }
-      main section.header .button a {
+      text-align: right; }
+      main section.header.home .button a {
+        border: 0.25rem solid #fff;
         padding: 1rem;
         background-color: #154776;
         display: inline-block;
@@ -66,65 +97,69 @@ main {
         text-decoration: none;
         color: #fff;
         font-weight: 700; }
-        main section.header .button a:hover {
+        main section.header.home .button a:hover {
           background-color: #57718c; }
-    main section.header .feature-image {
-      margin-top: -2rem;
-      position: relative;
-      margin-bottom: 1.5rem; }
-      main section.header .feature-image img {
+    main section.header.home .feature-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-height: 500px; }
+      main section.header.home .feature-image::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.2); }
+      main section.header.home .feature-image img {
         display: block;
         z-index: 1;
         object-fit: cover;
-        max-height: 300px;
+        max-height: 500px;
         width: 100%;
         height: 100%; }
-    main section.header .intro {
-      font-size: 1.25rem;
-      line-height: 1.5; }
-    main section.header .issues {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: auto;
-      grid-gap: 1rem;
-      grid-template-areas: 'title title title'; }
-      @media (max-width: 992px) {
-        main section.header .issues {
-          grid-template-columns: 1fr;
-          grid-template-areas: 'title'; } }
-      main section.header .issues h2 {
-        grid-area: title;
-        font-size: 2rem;
-        margin: 1.5rem 0 0 0; }
-      main section.header .issues .issue {
-        position: relative; }
-        main section.header .issues .issue h3 {
-          z-index: 2;
-          margin: 0;
-          padding: .5rem;
-          position: absolute;
-          top: 0;
-          left: 0;
-          color: #fff;
-          background-color: rgba(0, 0, 0, 0.8); }
-        main section.header .issues .issue img {
-          z-index: 1;
-          position: relative;
-          object-fit: cover;
-          width: 100%;
-          max-height: 300px;
-          height: 100%;
-          display: block; }
-    main section.header.issue h1 {
-      font-size: 3rem; }
-    main section.header.issue .feature-image {
-      margin-top: 0; }
-    main section.header.news {
-      border-bottom: 0;
-      margin-bottom: 0; }
-      main section.header.news h1 {
-        font-size: 3rem;
-        margin: 1.5rem 0 .5rem 0; }
+  main section.intro {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-bottom: 1px solid #154776;
+    padding-bottom: 1.5rem; }
+  main section.issues {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    grid-template-areas: 'title title title';
+    border-bottom: 1px solid #154776;
+    padding-bottom: 1.5rem; }
+    @media (max-width: 992px) {
+      main section.issues {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'title'; } }
+    main section.issues h2 {
+      grid-area: title;
+      font-size: 2rem;
+      margin: 1.5rem 0 0 0; }
+    main section.issues .issue {
+      position: relative; }
+      main section.issues .issue h3 {
+        z-index: 2;
+        margin: 0;
+        padding: .5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.8); }
+      main section.issues .issue img {
+        z-index: 1;
+        position: relative;
+        object-fit: cover;
+        width: 100%;
+        max-height: 300px;
+        height: 100%;
+        display: block; }
   main section.posts {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -159,7 +194,6 @@ main {
     grid-template-rows: auto;
     grid-gap: 1rem;
     grid-template-areas: 'title title title';
-    border-bottom: 1px solid #154776;
     padding-bottom: 1.5rem; }
     @media (max-width: 992px) {
       main section.latest {
@@ -201,7 +235,8 @@ main {
     grid-template-rows: auto;
     grid-gap: 1rem;
     grid-template-areas: 'title title';
-    padding-bottom: 1.5rem; }
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #154776; }
     @media (max-width: 992px) {
       main section.featured {
         grid-template-columns: 1fr;
