@@ -360,6 +360,7 @@ main {
       }
       .news-item {
         position: relative;
+        min-height: 300px;
         h3 {
           z-index: 2;
           margin: 0;

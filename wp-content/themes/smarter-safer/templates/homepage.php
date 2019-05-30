@@ -22,12 +22,6 @@
 	<section class="issues">
 		<h2>Issues</h2>
 		<div class="issue">
-			<a href="/earthquakes">
-				<h3>Earthquakes</h3>
-				<img src="<?php echo get_the_post_thumbnail_url(get_page_by_path('earthquakes')->ID) ?>" alt="">
-			</a>
-		</div>
-		<div class="issue">
 			<a href="/flooding">
 				<h3>Flooding</h3>
 				<img src="<?php echo get_the_post_thumbnail_url(get_page_by_path('flooding')->ID) ?>" alt="">
@@ -39,12 +33,18 @@
 				<img src="<?php echo get_the_post_thumbnail_url(get_page_by_path('wildfires')->ID) ?>" alt="">
 			</a>
 		</div>
+		<div class="issue">
+			<a href="/earthquakes">
+				<h3>Earthquakes</h3>
+				<img src="<?php echo get_the_post_thumbnail_url(get_page_by_path('earthquakes')->ID) ?>" alt="">
+			</a>
+		</div>
 	</section>
 
 	<section class="featured">
 		<h2>Current Work</h2>
 		<div class="featured-image">
-			<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/fire.jpg" alt="">
+			<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/andy-feliciotti-579740-unsplash.jpg" alt="">
 		</div>
 		<div class="content">
 		‘How to Reform US Disaster Policy to Prepare for a Coming Century of Crisis’ lays out a roadmap to a more rational approach to federal disaster policies that will save taxpayer dollars, protect the environment, and better prepare Americans for the risks they face now – and the risks natural disasters will pose in the future. 

@@ -18,14 +18,14 @@
 				<div class="news-item">
 					<a target="_blank" href="<?php the_field('link', $item->ID) ?>">
 						<h3><small>In The News</small><?php echo $item->post_title; ?></h3>
-						<img src="//unsplash.it/400/400" alt="">
+						<img src="<?php echo get_the_post_thumbnail_url($item->ID) ?>" alt="">
 					</a>
 				</div>
 			<?php else: ?>
 				<div class="news-item">
 					<a href="<?php the_permalink($item->ID) ?>">
 						<h3><small>Press Release</small><?php echo $item->post_title; ?></h3>
-						<img src="//unsplash.it/400/400" alt="">
+						<img src="<?php echo get_the_post_thumbnail_url($item->ID) ?>" alt="">
 					</a>
 				</div>
 			<?php endif; ?>

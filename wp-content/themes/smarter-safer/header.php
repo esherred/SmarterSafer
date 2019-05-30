@@ -26,7 +26,7 @@
         ]);
 			?>
 			<ul class="social">
-				<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+				<li><a href="https://twitter.com/SmarterSafer" target="_blank"><i class="fab fa-twitter"></i></a></li>
 			</ul>
 		</nav>
 	</header>
