@@ -48,6 +48,17 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/assets/img/fire.jpg": {
+		"ft": 16384,
+		"iS": 5632830,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/fire.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/assets/img/flood.jpg": {
 		"ft": 16384,
 		"iS": 1641481,

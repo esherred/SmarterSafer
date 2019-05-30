@@ -4,6 +4,8 @@ $white: #fff;
 $black: #000;
 $gray: #cdcdcd;
 
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i&display=swap');
+
 html,
 body {
   margin: 0;
@@ -12,6 +14,7 @@ body {
 
 * {
   box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
 }
 
 img {
@@ -276,6 +279,7 @@ main {
       }
       .news {
         position: relative;
+        min-height: 300px;
         h3 {
           z-index: 2;
           margin: 0;
