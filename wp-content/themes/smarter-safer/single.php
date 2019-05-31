@@ -2,7 +2,7 @@
 
 <?php the_post(); ?>
 
-<?php //$featured_img_url = get_the_post_thumbnail_url(); ?>
+<?php $featured_img_url = get_the_post_thumbnail_url(); ?>
 
 <?php get_header(); ?>
 

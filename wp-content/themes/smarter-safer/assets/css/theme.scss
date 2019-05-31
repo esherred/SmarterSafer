@@ -10,6 +10,10 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+body {
+  position: relative
 }
 
 * {
@@ -57,7 +61,19 @@ header {
     border-bottom: 1px solid $color-primary;
   }
 
+  .logo {
+    a {
+      display: inline-block;
+      img {
+        display: block;
+      }
+    }
+  }
+
   nav {
+    .close {
+      display: none;
+    }
     ul {
       display: inline;
       margin: 0;
@@ -74,6 +90,50 @@ header {
         }
       }
     }
+    @media (max-width: 992px) {
+      position: absolute;
+      top: 0;
+      right: -50%;
+      width: 50%;
+      padding: 2rem;
+      background-color: $color-primary;
+      z-index: 9;
+      height: 100%;
+      transition: .5s right ease-in-out;
+      
+      &.open {
+        // transform: translateX(-100%);
+        right: 0;
+      }
+
+      .close {
+        display: block;
+        font-size: 1.5rem; 
+        color: $white;
+        text-align: right;
+      }
+
+
+      ul {
+        li {
+          z-index: 10;
+          display: block;
+          margin: 1rem 0;
+          font-size: 1.5rem; 
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+    color: $color-primary;
+    @media (max-width: 992px) {
+      display: block;
+    }
   }
 }
 
@@ -85,6 +145,9 @@ main {
       position: relative;
       h2 {
         font-size: 3rem;
+        @media (max-width: 992px) {
+          font-size: 1.5rem;
+        }
       }
       .feature-image {
         position: relative;
@@ -134,16 +197,23 @@ main {
             display: flex;
             padding: 1.5rem;
             background-color: rgba($black, .45);
-            width: 45%;
+            width: 55%;
             height: 100%;
+            @media (max-width: 992px) {
+              width: 100%;
+            }
 
             h2 {
+              display: inline-block;
               text-align: right;
               font-size: 2.75rem;
               z-index: 2;
               position: relative;
               margin: 0;
               color: $white;
+              @media (max-width: 767px) {
+                font-size: 1.5rem;
+              }
             }
             .button {
               position: relative;
@@ -189,8 +259,7 @@ main {
               display: block;
               z-index: 1;
               object-fit: cover;
-              max-height: 500px;
-              width: 100%;
+              min-height: 500px;
               height: 100%;
             }
           }
@@ -253,6 +322,10 @@ main {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         grid-gap: 2rem;
+
+        @media (max-width: 992px) {
+          grid-template-columns: 1fr;
+        }
         .post {
           position: relative;
           margin-bottom: 2rem;

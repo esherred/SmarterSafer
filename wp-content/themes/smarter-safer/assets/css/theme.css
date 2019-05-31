@@ -2,7 +2,11 @@
 html,
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  overflow-x: hidden; }
+
+body {
+  position: relative; }
 
 * {
   box-sizing: border-box;
@@ -39,6 +43,12 @@ header {
       max-width: 90%; } }
   header.front {
     border-bottom: 1px solid #154776; }
+  header .logo a {
+    display: inline-block; }
+    header .logo a img {
+      display: block; }
+  header nav .close {
+    display: none; }
   header nav ul {
     display: inline;
     margin: 0;
@@ -52,11 +62,45 @@ header {
         text-decoration: none;
         text-transform: uppercase;
         font-weight: 700; }
+  @media (max-width: 992px) {
+    header nav {
+      position: absolute;
+      top: 0;
+      right: -50%;
+      width: 50%;
+      padding: 2rem;
+      background-color: #154776;
+      z-index: 9;
+      height: 100%;
+      transition: .5s right ease-in-out; }
+      header nav.open {
+        right: 0; }
+      header nav .close {
+        display: block;
+        font-size: 1.5rem;
+        color: #fff;
+        text-align: right; }
+      header nav ul li {
+        z-index: 10;
+        display: block;
+        margin: 1rem 0;
+        font-size: 1.5rem; }
+        header nav ul li a {
+          color: #fff; } }
+  header .mobile-menu {
+    display: none;
+    color: #154776; }
+    @media (max-width: 992px) {
+      header .mobile-menu {
+        display: block; } }
 
 main section.header {
   position: relative; }
   main section.header h2 {
     font-size: 3rem; }
+    @media (max-width: 992px) {
+      main section.header h2 {
+        font-size: 1.5rem; } }
   main section.header .feature-image {
     position: relative;
     margin-bottom: 1.5rem; }
@@ -92,15 +136,22 @@ main section.header {
         display: flex;
         padding: 1.5rem;
         background-color: rgba(0, 0, 0, 0.45);
-        width: 45%;
+        width: 55%;
         height: 100%; }
+        @media (max-width: 992px) {
+          main section.header.home .container .shadow {
+            width: 100%; } }
         main section.header.home .container .shadow h2 {
+          display: inline-block;
           text-align: right;
           font-size: 2.75rem;
           z-index: 2;
           position: relative;
           margin: 0;
           color: #fff; }
+          @media (max-width: 767px) {
+            main section.header.home .container .shadow h2 {
+              font-size: 1.5rem; } }
         main section.header.home .container .shadow .button {
           position: relative;
           z-index: 2;
@@ -135,8 +186,7 @@ main section.header {
           display: block;
           z-index: 1;
           object-fit: cover;
-          max-height: 500px;
-          width: 100%;
+          min-height: 500px;
           height: 100%; }
 
 main section.intro {
@@ -183,6 +233,9 @@ main section.posts .container {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 2rem; }
+  @media (max-width: 992px) {
+    main section.posts .container {
+      grid-template-columns: 1fr; } }
   main section.posts .container .post {
     position: relative;
     margin-bottom: 2rem; }
