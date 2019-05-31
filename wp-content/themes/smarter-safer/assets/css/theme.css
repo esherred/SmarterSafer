@@ -29,7 +29,8 @@ a {
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
-  font-weight: 700; }
+  font-weight: 700;
+  cursor: pointer; }
   .gform_button:hover {
     background-color: #57718c; }
 
