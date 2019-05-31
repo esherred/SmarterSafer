@@ -92,6 +92,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/img/smartersafer.png": {
+		"ft": 32768,
+		"iS": 8879,
+		"oA": 0,
+		"oAP": "/assets/img/smartersafer.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/js/theme-min.js": {
 		"bF": 0,
 		"ft": 64,

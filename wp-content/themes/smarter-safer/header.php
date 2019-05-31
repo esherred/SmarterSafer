@@ -11,7 +11,7 @@
 <body>
 	<header class="<?php echo is_front_page() ? 'front' : ''; ?>">
 		<div class="logo">
-			<a href="/"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/logo.png" alt=""></a>
+			<a href="/"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/smartersafer.png" alt=""></a>
 		</div>
 		<nav>
 			<div class="close"><i class="fas fa-times"></i></div>

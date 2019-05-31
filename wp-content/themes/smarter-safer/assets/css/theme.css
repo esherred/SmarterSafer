@@ -57,9 +57,10 @@ header {
   header.front {
     border-bottom: 1px solid #154776; }
   header .logo a {
-    display: inline-block; }
+    display: block; }
     header .logo a img {
-      display: block; }
+      display: block;
+      max-width: 275px; }
   header nav .close {
     display: none; }
   header nav ul {
@@ -75,6 +76,8 @@ header {
         text-decoration: none;
         text-transform: uppercase;
         font-weight: 700; }
+    header nav ul.social li a {
+      color: #00aced; }
   @media (max-width: 992px) {
     header nav {
       position: absolute;
