@@ -21,6 +21,18 @@ a {
   a:hover {
     color: #57718c; }
 
+.gform_button {
+  border: 0.25rem solid #fff;
+  padding: 1rem;
+  background-color: #154776;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700; }
+  .gform_button:hover {
+    background-color: #57718c; }
+
 .container {
   max-width: 1200px;
   margin: auto;

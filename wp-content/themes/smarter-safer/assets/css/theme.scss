@@ -33,6 +33,20 @@ a {
   }
 }
 
+.gform_button {
+  border: .25rem solid $white;
+  padding: 1rem;
+  background-color: $color-primary;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+  font-weight: 700;
+  &:hover {
+    background-color: $color-secondary;
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: auto;
