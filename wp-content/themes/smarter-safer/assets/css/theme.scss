@@ -220,8 +220,11 @@ main {
             display: flex;
             padding: 1.5rem;
             background-color: rgba($black, .45);
-            width: 55%;
+            width: 35%;
             height: 100%;
+            @media (max-width: 1200px) {
+              width: 45%;
+            }
             @media (max-width: 992px) {
               width: 100%;
             }
@@ -229,25 +232,31 @@ main {
             h2 {
               display: inline-block;
               text-align: right;
-              font-size: 2.75rem;
+              font-size: 2.5rem;
               z-index: 2;
               position: relative;
               margin: 0;
               color: $white;
-              @media (max-width: 767px) {
-                font-size: 2.25rem;
+              @media (max-width: 1200px) {
+                // font-size: 2.25rem;
               }
             }
             .button {
+              align-self: flex-end;
               position: relative;
               // padding: 5px;
               // margin: .5rem;
               z-index: 2;
               text-align: right;
-              font-size: 1rem;
+              font-size: .75rem;
+              @media (max-width: 1200px) {
+                font-size: 1rem;
+                // max-width: 75%;
+              }
+
     
               a {
-                border: .25rem solid $white;
+                border: .1rem solid $white;
                 padding: 1rem;
                 background-color: $color-primary;
                 display: inline-block;
