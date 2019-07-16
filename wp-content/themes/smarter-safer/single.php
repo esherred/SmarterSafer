@@ -1,5 +1,3 @@
-<?php /* Template Name: Issues Page */ ?>
-
 <?php the_post(); ?>
 
 <?php $featured_img_url = get_the_post_thumbnail_url(); ?>
