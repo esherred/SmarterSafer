@@ -21,6 +21,9 @@ a {
   a:hover {
     color: #57718c; }
 
+.more {
+  text-align: right; }
+
 .gform_button {
   border: 0.25rem solid #fff;
   padding: 1rem;
@@ -255,8 +258,6 @@ main section.posts .container {
   @media (max-width: 992px) {
     main section.posts .container {
       grid-template-columns: 1fr; } }
-  main section.posts .container .more {
-    text-align: right; }
   main section.posts .container .post {
     position: relative;
     margin-bottom: 2rem; }

@@ -65,10 +65,10 @@
 
 	<section class="latest">
 		<div class="container">
-			<h2>Latest News</h2>
+			<h2><a href="/latest-news">Latest News</a></h2>
 			<?php 
 				$news = get_posts(array(
-					'numberposts' => '-1',
+					'numberposts' => '6',
 				));
 			?>
 			<?php foreach($news as $item): ?>

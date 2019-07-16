@@ -33,6 +33,10 @@ a {
   }
 }
 
+.more {
+  text-align: right;
+}
+
 .gform_button {
   border: .25rem solid $white;
   padding: 1rem;
@@ -356,10 +360,6 @@ main {
 
         @media (max-width: 992px) {
           grid-template-columns: 1fr;
-        }
-
-        .more {
-          text-align: right;
         }
 
         .post {
