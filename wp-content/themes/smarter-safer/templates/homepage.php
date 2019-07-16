@@ -13,8 +13,8 @@
 				<img src="<?php echo $featured_img_url ?>" alt="<?php the_title(); ?>">
 			</div>
 			<div class="shadow">
-				<h2>Dangerous weather events and natural disasters are predicted to only get worse.</h2>
-				<div class="button"><a href="#">Download our Congressional Guide <i class="fas fa-arrow-right"></i></a></div>
+				<h2>Dangerous weather events and natural disasters are predicted to only get worse. Learn more in our Congressional Guide.</h2>
+				<div class="button"><a href="#">Download Now <i class="fas fa-arrow-right"></i></a></div>
 			</div>
 		</div>
 	</section>

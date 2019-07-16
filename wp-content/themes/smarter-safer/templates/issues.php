@@ -71,7 +71,7 @@
 						get_cat_ID('press-release'),
 					);
 					$news = get_posts(array(
-						'numberposts' => '-1',
+						'numberposts' => '6',
 						'cat' => $cats,
 					));
 					$has_posts = false;
@@ -117,6 +117,9 @@
 				<?php else: ?>
 					More news coming soon!
 				<?php endif; ?>
+				<div class="more">
+					<h3><a href="/latest-news">Read More News <i class="fas fa-arrow-right"></i></a></h3>
+				</div>
 			</div>
 		</div>
 	</section>

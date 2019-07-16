@@ -232,7 +232,7 @@ main {
             h2 {
               display: inline-block;
               text-align: right;
-              font-size: 2.5rem;
+              font-size: 2.1rem;
               z-index: 2;
               position: relative;
               margin: 0;
@@ -357,6 +357,11 @@ main {
         @media (max-width: 992px) {
           grid-template-columns: 1fr;
         }
+
+        .more {
+          text-align: right;
+        }
+
         .post {
           position: relative;
           margin-bottom: 2rem;
