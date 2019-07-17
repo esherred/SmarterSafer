@@ -322,6 +322,8 @@ main section.latest .container {
       width: 100%;
       height: 300px;
       display: block; }
+  main section.latest .container .more {
+    grid-column: 1/4; }
 
 main section.featured .container {
   display: grid;

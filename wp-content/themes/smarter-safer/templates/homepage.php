@@ -89,18 +89,21 @@
 					<div class="news">
 						<a href="<?php the_permalink($item->ID) ?>">
 							<h3><small>In The News</small><?php echo $item->post_title; ?></h3>
-							<img src="<?php echo $thumb ?>" alt="">
+							<img src="<?php echo $thumb ?>" alt="<?php echo $item->post_title; ?>">
 						</a>
 					</div>
 				<?php elseif(has_category('press-release', $item->ID)): ?>
 					<div class="news">
 						<a href="<?php the_permalink($item->ID) ?>">
 							<h3><small>Press Release</small><?php echo $item->post_title; ?></h3>
-							<img src="<?php echo $thumb ?>" alt="">
+							<img src="<?php echo $thumb ?>" alt="<?php echo $item->post_title; ?>">
 						</a>
 					</div>
 				<?php endif; ?>
 			<?php endforeach; ?>
+			<div class="more">
+				<h3><a href="/latest-news">Read More News <i class="fas fa-arrow-right"></i></a></h3>
+			</div>
 		</div>
 	</section>
 

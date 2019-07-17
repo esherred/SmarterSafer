@@ -440,6 +440,9 @@ main {
             display: block;
           }
         }
+        .more {
+          grid-column: 1/4;
+        }
       }
     }
 
