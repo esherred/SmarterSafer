@@ -75,11 +75,15 @@
 				<?php
 					if(get_the_post_thumbnail_url($item->ID)) {
 						$thumb = get_the_post_thumbnail_url($item->ID);
-					} else if(has_category('flooding', $item->ID)) {
+					} elseif(has_category('in-the-news', $item->ID) && get_field('default_in_the_news','options')) {
+						$thumb = get_field('default_in_the_news','options');
+					} elseif(has_category('press-release', $item->ID) && get_field('default_press_release','options')) {
+						$thumb = get_field('default_press_release','options');
+					} elseif(has_category('flooding', $item->ID) && get_field('default_flooding','options')) {
 						$thumb = get_field('default_flooding','options');
-					} else if(has_category('wildfires', $item->ID)) {
+					} elseif(has_category('wildfires', $item->ID) && get_field('default_wildfires','options')) {
 						$thumb = get_field('default_wildfires','options');
-					} else if(has_category('earthquake', $item->ID)) {
+					} elseif(has_category('earthquake', $item->ID) && get_field('default_earthquake','options')) {
 						$thumb = get_field('default_earthquake','options');
 					} else {
 						$thumb = get_field('default_image','options');
