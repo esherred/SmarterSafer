@@ -91,7 +91,7 @@
 				?>
 				<div class="news">
 					<a href="<?php the_permalink($item->ID) ?>">
-						<h3><small>In The News</small><?php echo $item->post_title; ?></h3>
+						<h3><?php echo $item->post_title; ?></h3>
 						<img src="<?php echo $thumb ?>" alt="<?php echo $item->post_title; ?>">
 					</a>
 				</div>
