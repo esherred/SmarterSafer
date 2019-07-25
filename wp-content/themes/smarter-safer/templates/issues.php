@@ -104,17 +104,10 @@
 								}
 							?>
 							<div class="post">
-								<?php if(has_category('in-the-news', $item->ID)): ?>
-									<a href="<?php the_permalink($item->ID) ?>">
-										<h3><small>In The News</small><?php echo $item->post_title; ?></h3>
-										<img src="<?php echo $thumb ?>" alt="<?php echo $item->post_title; ?>">
-									</a>
-								<?php elseif(has_category('press-release', $item->ID)): ?>
-									<a href="<?php the_permalink($item->ID) ?>">
-										<h3><small>Press Release</small><?php echo $item->post_title; ?></h3>
-										<img src="<?php echo $thumb ?>" alt="<?php echo $item->post_title; ?>">
-									</a>
-								<?php endif; ?>
+								<a href="<?php the_permalink($item->ID) ?>">
+									<h3><?php echo $item->post_title; ?></h3>
+									<img src="<?php echo $thumb ?>" alt="<?php echo $item->post_title; ?>">
+								</a>
 							</div>
 						<?php endif; ?>
 					<?php endforeach; ?>
