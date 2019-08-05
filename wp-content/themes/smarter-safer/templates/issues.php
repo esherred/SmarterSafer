@@ -72,7 +72,7 @@
 					);
 					$news = new WP_Query(array(
 						'numberposts' => '6',
-						'cat' => get_field('defau lt_category'),
+						'cat' => get_field('default_category'),
 						'category__in' => $cats,
 					));
 					$has_posts = false;
