@@ -67,12 +67,13 @@
 				<h2>Latest News</h2>
 				<?php 
 					$cats = array(
-						get_cat_ID('in-the-news'),
-						get_cat_ID('press-release'),
+						get_category_by_slug( 'in-the-news' )->term_id,
+						get_category_by_slug( 'press-release' )->term_id,
 					);
-					$news = get_posts(array(
+					$news = new WP_Query(array(
 						'numberposts' => '6',
-						'cat' => $cats,
+						'cat' => get_field('defau lt_category'),
+						'category__in' => $cats,
 					));
 					$has_posts = false;
 					if($news){
