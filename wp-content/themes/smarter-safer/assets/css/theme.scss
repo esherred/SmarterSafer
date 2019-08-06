@@ -121,6 +121,7 @@ header {
 
           @media(max-width:992px) {
             position: relative;
+            display: block;
             background: none;
           }
 
@@ -499,6 +500,13 @@ main {
         }
         .more {
           grid-column: 1/4;
+
+          @media (max-width: 992px) {
+            grid-column: 1/3;
+          }
+          @media (max-width: 767px) {
+            grid-column: unset;
+          }
         }
       }
     }
@@ -537,7 +545,7 @@ main {
           line-height: 1.5;
 
           .more {
-            margin-top: 1.5rem;
+            margin-top: 1.5rem; 
           }
         }
       }
