@@ -73,12 +73,33 @@ header {
     padding: 0; }
     header nav ul li {
       display: inline-block;
-      margin: 0 1rem; }
+      margin: 0 1rem;
+      position: relative; }
       header nav ul li a {
         color: #154776;
         text-decoration: none;
         text-transform: uppercase;
         font-weight: 700; }
+      header nav ul li > ul {
+        position: absolute;
+        display: none;
+        left: 0;
+        width: auto;
+        border: 1px solid #154776;
+        background: #fff; }
+        @media (max-width: 992px) {
+          header nav ul li > ul {
+            position: relative;
+            background: none; } }
+        header nav ul li > ul li {
+          display: block;
+          margin: .5rem; }
+          header nav ul li > ul li a {
+            white-space: nowrap; }
+        header nav ul li > ul:hover {
+          display: block; }
+      header nav ul li:hover > ul {
+        display: block; }
     header nav ul.social li a {
       color: #00aced; }
   @media (max-width: 992px) {

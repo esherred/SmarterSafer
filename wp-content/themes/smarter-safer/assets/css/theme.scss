@@ -102,11 +102,41 @@ header {
       li {
         display: inline-block;
         margin: 0 1rem;
+        position: relative;
         a {
           color: $color-primary;
           text-decoration: none;
           text-transform: uppercase;
           font-weight: 700;
+        }
+
+        > ul {
+          position: absolute;
+          display: none;
+          left: 0;
+          width: auto;
+          border: 1px solid #154776;
+          background: #fff;
+
+          @media(max-width:992px) {
+            position: relative;
+            background: none;
+          }
+
+          li {
+            display: block;
+            margin: .5rem;
+
+            a {
+              white-space: nowrap;
+            }
+          }
+          &:hover {
+            display: block;
+          }
+        }
+        &:hover > ul {
+          display: block;
         }
       }
       &.social {
