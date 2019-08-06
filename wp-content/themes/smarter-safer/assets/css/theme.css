@@ -241,7 +241,7 @@ main section.issues .container {
       top: 0;
       left: 0;
       color: #fff;
-      background-color: rgba(0, 0, 0, 0.8); }
+      background-color: black; }
     main section.issues .container .issue img {
       z-index: 1;
       position: relative;
@@ -269,7 +269,7 @@ main section.posts .container {
       bottom: 0;
       left: 0;
       color: #fff;
-      background-color: rgba(0, 0, 0, 0.8); }
+      background-color: black; }
       main section.posts .container .post h3 small {
         display: block;
         font-size: 60%; }
@@ -281,6 +281,23 @@ main section.posts .container {
       max-height: 300px;
       height: 100%;
       display: block; }
+  main section.posts .container.news-only {
+    grid-template-columns: 1fr; }
+    main section.posts .container.news-only .news-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+      grid-template-areas: 'header header'; }
+      main section.posts .container.news-only .news-items > h2 {
+        grid-area: header; }
+      main section.posts .container.news-only .news-items .more {
+        grid-column: 1/3; }
+      @media (max-width: 992px) {
+        main section.posts .container.news-only .news-items {
+          grid-template-columns: 1fr;
+          grid-template-areas: 'header'; }
+          main section.posts .container.news-only .news-items .more {
+            grid-column: unset; } }
 
 main section.latest .container {
   display: grid;
@@ -311,7 +328,7 @@ main section.latest .container {
       bottom: 0;
       left: 0;
       color: #fff;
-      background-color: rgba(0, 0, 0, 0.8); }
+      background-color: black; }
       main section.latest .container .news h3 small {
         display: block;
         font-size: 60%; }
@@ -375,7 +392,7 @@ main section.news-items .container {
       bottom: 0;
       left: 0;
       color: #fff;
-      background-color: rgba(0, 0, 0, 0.8); }
+      background-color: black; }
       main section.news-items .container .news-item h3 small {
         display: block;
         font-size: 60%; }

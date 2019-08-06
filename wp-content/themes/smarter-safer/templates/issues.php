@@ -23,8 +23,8 @@
 	</section>
 	
 	<section class="posts">
-		<div class="container">
-			<div class="resources">
+		<div class="container news-only">
+			<!-- <div class="resources">
 				<h2>Latest Resources</h2>
 				<?php 
 					$cats = array(
@@ -61,7 +61,7 @@
 				<?php else: ?>
 					Resources coming soon!
 				<?php endif; ?>
-			</div>
+			</div> -->
 
 			<div class="news-items">
 				<h2>Latest News</h2>

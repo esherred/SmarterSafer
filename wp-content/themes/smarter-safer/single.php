@@ -8,7 +8,7 @@
 	<section class="header issue blue">
 		<div class="container">
 			<h1><?php the_title() ?></h1>
-			<?php if($featured_img_url) : ?>
+			<?php if($featured_img_url && !get_field('hide_featured')) : ?>
 				<div class="feature-image">
 					<img src="<?php echo $featured_img_url ?>" alt="<?php the_title(); ?>">
 				</div>
