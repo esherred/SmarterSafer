@@ -53,7 +53,7 @@
 		<div class="container">
 			<h2>Current Work</h2>
 			<div class="featured-image">
-				<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/andy-feliciotti-579740-unsplash.jpg" alt="">
+				<img src="/wp-content/uploads/2019/08/Smartersafer_reportcover_web.jpg" alt="">
 			</div>
 			<div class="content">
 			‘How to Reform US Disaster Policy to Prepare for a Coming Century of Crisis’ lays out a roadmap to a more rational approach to federal disaster policies that will save taxpayer dollars, protect the environment, and better prepare Americans for the risks they face now – and the risks natural disasters will pose in the future. 

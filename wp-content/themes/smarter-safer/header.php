@@ -24,7 +24,7 @@
           'container_class' => false,
           'menu_id'         => false,
           'menu_class'      => 'nav',
-          'depth'           => 1
+          'depth'           => 2
         ]);
 			?>
 			<ul class="social">
