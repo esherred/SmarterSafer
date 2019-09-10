@@ -7,17 +7,25 @@
 <?php get_header(); ?>
 
 <main>
-	<section class="header home">
-		<div class="container">
-			<div class="feature-image">
-				<img src="<?php echo $featured_img_url ?>" alt="<?php the_title(); ?>">
+	<?php while( have_rows('hero_section') ): the_row();  ?>
+		<section class="header home">
+			<div class="container">
+				<div class="feature-image">
+					<img src="<?php echo $featured_img_url ?>" alt="<?php the_title(); ?>">
+				</div>
+				<div class="shadow">
+					<h2><?php the_sub_field('hero_copy') ?></h2>
+					<?php if(get_sub_field('hero_link_type') == 'file'): ?>
+						<div class="button"><a target="_blank" href="<?php the_sub_field('file') ?>"><?php the_sub_field('button_copy') ?> <i class="fas fa-arrow-right"></i></a></div>
+					<?php elseif(get_sub_field('hero_link_type') == 'page'): ?>
+						<div class="button"><a href="<?php the_sub_field('internal_page') ?>"><?php the_sub_field('button_copy') ?> <i class="fas fa-arrow-right"></i></a></div>
+					<?php elseif(get_sub_field('hero_link_type') == 'link'): ?>
+						<div class="button"><a target="_blank" href="<?php the_sub_field('external_page') ?>"><?php the_sub_field('button_copy') ?> <i class="fas fa-arrow-right"></i></a></div>
+					<?php endif; ?>
+				</div>
 			</div>
-			<div class="shadow">
-				<h2>Dangerous weather events and natural disasters are predicted to only get worse. Learn more in our Congressional Guide.</h2>
-				<div class="button"><a href="#">Download Now <i class="fas fa-arrow-right"></i></a></div>
-			</div>
-		</div>
-	</section>
+		</section>
+	<?php endwhile; ?>
 
 	<section class="intro blue">
 		<div class="container">
@@ -49,19 +57,26 @@
 		</div>
 	</section>
 
-	<section class="featured blue">
-		<div class="container">
-			<h2>Current Work</h2>
-			<div class="featured-image">
-				<img src="/wp-content/uploads/2019/08/Smartersafer_reportcover_web.jpg" alt="">
+	<?php while(have_rows('current_work_section')): the_row(); ?>
+		<section class="featured blue">
+			<div class="container">
+				<h2>Current Work</h2>
+				<div class="featured-image">
+					<img src="<?php the_sub_field('current_work_image') ?>" alt="">
+				</div>
+				<div class="content">
+					<?php the_sub_field('current_work_copy') ?>
+					<?php if(get_sub_field('current_work_link_type') == 'file'): ?>
+						<div class="more"><a target="_blank" href="<?php the_sub_field('file') ?>"><?php the_sub_field('current_work_button_copy') ?> <i class="fas fa-arrow-right"></i></a></div>
+					<?php elseif(get_sub_field('current_work_link_type') == 'page'): ?>
+						<div class="more"><a href="<?php the_sub_field('internal_page') ?>"><?php the_sub_field('current_work_button_copy') ?> <i class="fas fa-arrow-right"></i></a></div>
+					<?php elseif(get_sub_field('current_work_link_type') == 'link'): ?>
+						<div class="more"><a target="_blank" href="<?php the_sub_field('external_page') ?>"><?php the_sub_field('current_work_button_copy') ?> <i class="fas fa-arrow-right"></i></a></div>
+					<?php endif; ?>
+				</div>
 			</div>
-			<div class="content">
-			‘How to Reform US Disaster Policy to Prepare for a Coming Century of Crisis’ lays out a roadmap to a more rational approach to federal disaster policies that will save taxpayer dollars, protect the environment, and better prepare Americans for the risks they face now – and the risks natural disasters will pose in the future. 
-
-				<div class="more"><a href="#">Download The Report <i class="fas fa-arrow-right"></i></a></div>
-			</div>
-		</div>
-	</section>
+		</section>
+	<?php endwhile; ?>
 
 	<section class="latest">
 		<div class="container">
